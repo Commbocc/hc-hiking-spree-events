@@ -39,7 +39,7 @@ import { events } from "../lib/events";
 
             <td>
               <a class="btn btn-primary" :href="`${event.fields.Link}`"
-                >More Info & Register</a
+                >More Info & Registration</a
               >
             </td>
           </tr>
