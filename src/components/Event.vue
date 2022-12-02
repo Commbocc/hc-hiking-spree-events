@@ -12,7 +12,7 @@ import { events } from "../lib/events";
           <th>Event Name</th>
           <th>Date</th>
           <th>Location</th>
-          <th>More Info & Registration</th>
+          <th></th>
         </tr>
       </thead>
 
@@ -39,7 +39,7 @@ import { events } from "../lib/events";
 
             <td>
               <a class="btn btn-primary" :href="`${event.fields.Link}`"
-                >More Info & Registration</a
+                >Info & Registration</a
               >
             </td>
           </tr>
