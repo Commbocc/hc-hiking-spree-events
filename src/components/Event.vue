@@ -19,9 +19,9 @@ import { events } from "../lib/events";
       <tbody>
         <template v-for="(event, i) in events.data" :key="i">
           <tr v-if="event.fields.Published">
-            <td>{{ event.fields.Name }}</td>
+            <td v-if="event.fields.Name">{{ event.fields.Name }}</td>
 
-            <td>
+            <td v-if="event.fields.DateTime">
               {{ new Date(event.fields.DateTime).toLocaleDateString("en-US") }},
               {{
                 new Date(event.fields.DateTime).toLocaleTimeString("en-US", {
@@ -31,13 +31,13 @@ import { events } from "../lib/events";
               }}
             </td>
 
-            <td>
+            <td v-if="event.fields.LocationUrl">
               <a :href="`${event.fields.LocationUrl[0]}`">{{
                 event.fields.LocationName[0]
               }}</a>
             </td>
 
-            <td>
+            <td v-if="event.fields.Link">
               <a class="btn btn-primary" :href="`${event.fields.Link}`"
                 >Info & Registration</a
               >
