@@ -39,7 +39,7 @@ import { events } from "../lib/events";
 
             <td>
               <span v-if="event.fields.LocationUrl">
-                <a :href="`${event.fields.LocationUrl[0]}`">{{
+                <a target="_top" :href="`${event.fields.LocationUrl[0]}`">{{
                   event.fields.LocationName[0]
                 }}</a></span
               >
@@ -47,7 +47,10 @@ import { events } from "../lib/events";
 
             <td>
               <span v-if="event.fields.Link">
-                <a class="btn btn-primary" :href="`${event.fields.Link}`"
+                <a
+                  class="btn btn-primary"
+                  target="_blank"
+                  :href="`${event.fields.Link}`"
                   >Info & Registration</a
                 ></span
               >
